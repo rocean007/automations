@@ -13,7 +13,7 @@ services:
       - ./youtube_token.pickle:/app/youtube_token.pickle
       - ./logs:/app/logs
     environment:
-      - CREATE_NOW=false
+      - CREATE_NOW=false  # Set to 'true' to create video immediately on start
     logging:
       driver: "json-file"
       options:
