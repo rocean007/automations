@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# API Keys and Secrets
+config.yaml
+client_secrets.json
+youtube_token.pickle
+.env
+
+# Generated Content
+character_dataset/
+generated_content/
+output_videos/
+music/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Docker
+*.log
+
+# Temporary files
+*.tmp
+temp/

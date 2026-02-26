@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  brainrot-automation:
+    build: .
+    container_name: brainrot-bot
+    restart: unless-stopped
+    volumes:
+      - ./character_dataset:/app/character_dataset
+      - ./music:/app/music
+      - ./config.yaml:/app/config.yaml
+      - ./client_secrets.json:/app/client_secrets.json
+      - ./youtube_token.pickle:/app/youtube_token.pickle
+      - ./logs:/app/logs
+    environment:
+      - CREATE_NOW=false
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
